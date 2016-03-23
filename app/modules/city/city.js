@@ -24,6 +24,10 @@ city.controller('cityController', ['$scope', '$http', '$cookies', '$location', f
   // Get all countries from API
   $scope.getCityInfo = function () {
     console.log('get info for city id  ' + $scope.city_id);
+    if ( angular.isUndefined($scope.city_id)) {
+      console.log('city_id is not defined, redirecting to cities page');
+      $location.path('/fe/cities');
+    }
     $http({
       url: 'http://localhost:8090/be/city/info',
       method: 'GET',
