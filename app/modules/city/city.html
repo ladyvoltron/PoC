@@ -1,0 +1,45 @@
+<div>
+        <h1>Proof of Concept demo</h1>
+</div>
+<div class="row">
+    city id is {{city_id}}
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <b>Name:</b>
+    </div>
+    <div class="col-sm-6">
+        {{cityInfo[0].name}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <b>Country:</b>
+    </div>
+    <div class="col-sm-6">
+        {{cityInfo[0].country.name}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <b>Region:</b>
+    </div>
+    <div class="col-sm-6">
+        {{cityInfo[0].region.name}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <b>Area code:</b>
+    </div>
+    <div class="col-sm-6">
+        {{cityInfo[0].areaCode}}
+    </div>
+</div>
+<div class="row">
+    <button type="submit" class="btn btn-default"
+            ng-click="back()">
+        Back
+    </button>
+</div>
+{{cityInfo}}

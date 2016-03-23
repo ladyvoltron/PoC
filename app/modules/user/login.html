@@ -1,0 +1,29 @@
+<div>
+    <h1>Proof of Concept login page</h1>
+</div>
+<div>
+<form name="loginForm" role="form" novalidate>
+    <div class="form-group">
+        <label for="name">Your name:</label>
+        <input type="text" class="form-control" id="name" required
+            ng-model="loginData.name">
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" required
+            ng-model="loginData.password">
+    </div>
+    <button type="submit" class="btn btn-default"
+            ng-disabled="loginForm.$invalid"
+            ng-click="submit()">Submit</button>
+</form>
+
+<div>{{errMsg}}</div>
+
+<div>
+    Debug data: <br>
+    Login data: {{loginData}} <br>
+    Node response: {{nodeResponse}} <br>
+    Node response status: {{nodeResponse.statusCode}}
+</div>
+</div>

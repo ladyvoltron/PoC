@@ -1,0 +1,45 @@
+<div>
+    <h1>Proof of Concept demo</h1>
+</div>
+
+<form name="selectCity" action="/#/fe/city" role="form" novalidate>
+    <div class="row">
+        <div class="col-sm-6">
+            <b>Select a country</b>
+        </div>
+        <div class="col-sm-6">
+            <b>Select a city</b>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <select class="form-control" id="country" required
+                        ng-model="selectedCountryId"
+                        ng-options="country.id as country.name for country in countries"
+                        ng-change="getCountryCities()">
+                </select>
+                <p> selected country id is {{selectedCountryId}}</p>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <select class="form-control" id="city" required
+                        ng-model="selectedCityId"
+                        ng-options="city.id as city.name for city in countryCities">
+                </select>
+                <p> selected city id is {{selectedCityId}}</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-default"
+                ng-disabled="selectCity.$invalid"
+                ng-click="submit()">
+            Get city info
+        </button>
+    </div>
+</form>
+<!-- div>
+    {{countryCities}}
+</div -->

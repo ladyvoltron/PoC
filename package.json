@@ -1,0 +1,12 @@
+{
+  "name": "PoC",
+  "version": "0.0.1",
+  "description"  : "Proof of Concept application.",
+  "main"         : "server.js",
+  "author"       : "Olga Danilova",
+  "dependencies" : {
+      "express"    : "~4.13.4",
+      "body-parser": "~1.15.0",
+      "request"    : "~2.69.0"
+  }
+}
